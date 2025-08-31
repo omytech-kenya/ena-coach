@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BookingWidget from '../components/BookingWidget';
 import FeatureCard from '../components/FeatureCard';
-import { ShieldCheckIcon, SparklesIcon, ClockIcon, CubeTransparentIcon, MapIcon, WifiIcon, CoffeeIcon, CreditCardIcon } from '../components/icons/FeatureIcons';
+import { SafetyIcon, ComfortIcon, PunctualityIcon, LogisticsIcon, LocationMarkerIcon, CalendarIcon, UsersIcon, WifiIcon, CoffeeIcon, CreditCardIcon, MapIcon } from '../components/icons/FeatureIcons';
 import { SCHEDULES } from '../constants';
 
 const HomePage: React.FC = () => {
@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
             <div className="relative min-h-screen bg-gradient-to-br from-blue-900 via-black to-gray-900 overflow-hidden">
                 {/* Background Video/Image */}
                 <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-                     style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544620347-c4fd4a3d7117?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')" }}>
+                     style={{ backgroundImage: "url('/enawall.png')" }}>
                     <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
                 </div>
                 
@@ -189,22 +189,22 @@ const HomePage: React.FC = () => {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <FeatureCard 
-                            icon={<ShieldCheckIcon />}
+                            icon={<SafetyIcon />}
                             title="Premium Safety"
                             description="State-of-the-art safety systems, certified drivers, and regular vehicle inspections ensure your peace of mind."
                         />
                         <FeatureCard 
-                            icon={<SparklesIcon />}
+                            icon={<ComfortIcon />}
                             title="Luxury Comfort"
                             description="Premium leather seats, climate control, and entertainment systems make every journey a pleasure."
                         />
                         <FeatureCard 
-                            icon={<ClockIcon />}
+                            icon={<PunctualityIcon />}
                             title="Punctual Service"
                             description="Our commitment to timeliness means you'll never miss important appointments or connections."
                         />
                         <FeatureCard 
-                            icon={<CubeTransparentIcon />}
+                            icon={<LogisticsIcon />}
                             title="Smart Logistics"
                             description="Advanced parcel tracking and secure delivery across our extensive network."
                         />
