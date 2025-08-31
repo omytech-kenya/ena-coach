@@ -15,10 +15,10 @@ export const ROUTES: Route[] = [
 ];
 
 export const SCHEDULES: Schedule[] = [
-    { id: 'sch1', route: ROUTES[0], departureTime: "08:00 AM", arrivalTime: "04:00 PM", price: 2500, seatsAvailable: 15, totalSeats: 45 },
-    { id: 'sch2', route: ROUTES[0], departureTime: "10:00 PM", arrivalTime: "06:00 AM", price: 2800, seatsAvailable: 5, totalSeats: 45 },
-    { id: 'sch3', route: ROUTES[1], departureTime: "09:00 AM", arrivalTime: "03:00 PM", price: 2200, seatsAvailable: 25, totalSeats: 45 },
-    { id: 'sch4', route: ROUTES[1], departureTime: "09:00 PM", arrivalTime: "04:00 AM", price: 2400, seatsAvailable: 10, totalSeats: 45 },
-    { id: 'sch5', route: ROUTES[2], departureTime: "08:30 AM", arrivalTime: "04:30 PM", price: 2500, seatsAvailable: 20, totalSeats: 45 },
-    { id: 'sch6', route: ROUTES[3], departureTime: "10:30 PM", arrivalTime: "05:30 AM", price: 2400, seatsAvailable: 12, totalSeats: 45 },
+    { id: 'sch1', route: ROUTES[0], departureTime: "08:00 AM", arrivalTime: "04:00 PM", price: 1600, seatsAvailable: 15, totalSeats: 45 },
+    { id: 'sch2', route: ROUTES[0], departureTime: "10:00 PM", arrivalTime: "06:00 AM", price: 1600, seatsAvailable: 5, totalSeats: 45 },
+    { id: 'sch3', route: ROUTES[1], departureTime: "09:00 AM", arrivalTime: "03:00 PM", price: 1700, seatsAvailable: 25, totalSeats: 45 },
+    { id: 'sch4', route: ROUTES[1], departureTime: "09:00 PM", arrivalTime: "04:00 AM", price: 1800, seatsAvailable: 10, totalSeats: 45 },
+    { id: 'sch5', route: ROUTES[2], departureTime: "08:30 AM", arrivalTime: "04:30 PM", price: 1750, seatsAvailable: 20, totalSeats: 45 },
+    { id: 'sch6', route: ROUTES[3], departureTime: "10:30 PM", arrivalTime: "05:30 AM", price: 1650, seatsAvailable: 12, totalSeats: 45 },
 ];

@@ -14,6 +14,7 @@ import ContactPage from './pages/ContactPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import AdminDashboardPage from './pages/AdminDashboardPage';
+import GalleryPage from './pages/GalleryPage';
 
 const App: React.FC = () => {
     return (
@@ -23,6 +24,7 @@ const App: React.FC = () => {
                 <Route path="/booking" element={<MainLayout><BookingPage /></MainLayout>} />
                 <Route path="/parcels" element={<MainLayout><ParcelPage /></MainLayout>} />
                 <Route path="/routes" element={<MainLayout><RoutesPage /></MainLayout>} />
+                <Route path="/gallery" element={<MainLayout><GalleryPage /></MainLayout>} />
                 <Route path="/about" element={<MainLayout><AboutPage /></MainLayout>} />
                 <Route path="/contact" element={<MainLayout><ContactPage /></MainLayout>} />
                 <Route path="/login" element={<MainLayout><LoginPage /></MainLayout>} />

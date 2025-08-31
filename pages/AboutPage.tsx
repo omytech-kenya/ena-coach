@@ -6,7 +6,7 @@ const AboutPage: React.FC = () => {
         <div>
             {/* Hero Section */}
             <div className="relative bg-black text-white">
-                <img src="https://picsum.photos/1920/600?bus,team" alt="ENA Coach Team" className="w-full h-80 object-cover opacity-50"/>
+                <img src="/ena15.png" alt="ENA Coach Team" className="w-full h-80 object-cover opacity-50"/>
                 <div className="absolute inset-0 flex items-center justify-center">
                     <h1 className="text-5xl font-extrabold text-center">About ENA Coach</h1>
                 </div>
@@ -25,7 +25,7 @@ const AboutPage: React.FC = () => {
                             </p>
                         </div>
                         <div>
-                            <img src="https://picsum.photos/600/400?bus,vintage" alt="Vintage Bus" className="rounded-2xl shadow-lg w-full"/>
+                            <img src="/ena11.png" alt="Vintage Bus" className="rounded-2xl shadow-lg w-full"/>
                         </div>
                     </div>
                 </div>
@@ -57,9 +57,9 @@ const AboutPage: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Fleet & Team</h2>
                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                         <img src="https://picsum.photos/400/300?bus,modern" alt="Modern Bus" className="rounded-2xl shadow-lg w-full h-64 object-cover"/>
-                         <img src="https://picsum.photos/400/300?people,smiling,driver" alt="ENA Coach Driver" className="rounded-2xl shadow-lg w-full h-64 object-cover"/>
-                         <img src="https://picsum.photos/400/300?bus,interior" alt="Bus Interior" className="rounded-2xl shadow-lg w-full h-64 object-cover"/>
+                         <img src="/ena14.png" alt="Modern Bus" className="rounded-2xl shadow-lg w-full h-64 object-cover"/>
+                         <img src="ena4.png" alt="ENA Coach Driver" className="rounded-2xl shadow-lg w-full h-64 object-cover"/>
+                         <img src="ena18.png" alt="Bus Interior" className="rounded-2xl shadow-lg w-full h-64 object-cover"/>
                      </div>
                 </div>
             </div>
