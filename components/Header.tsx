@@ -5,11 +5,16 @@ import { NavLink } from 'react-router-dom';
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const navLinkClasses = "text-white hover:text-ena-yellow transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium";
-    const activeNavLinkClasses = "text-ena-yellow";
-
-    const getNavLinkClass = ({ isActive }: { isActive: boolean }) => 
-        isActive ? `${navLinkClasses} ${activeNavLinkClasses}` : navLinkClasses;
+    const DesktopNavLink: React.FC<{ to: string; children: React.ReactNode }> = ({ to, children }) => (
+        <NavLink to={to}>
+            {({ isActive }) => (
+                <div className={`text-white hover:text-ena-yellow transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium relative group ${isActive ? 'text-ena-yellow' : ''}`}>
+                    {children}
+                    <span className={`absolute bottom-0 left-0 h-0.5 bg-ena-yellow transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                </div>
+            )}
+        </NavLink>
+    );
 
     return (
         <header className="bg-black shadow-lg sticky top-0 z-50">
@@ -22,13 +27,13 @@ const Header: React.FC = () => {
                     </div>
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
-                            <NavLink to="/" className={getNavLinkClass}>Home</NavLink>
-                            <NavLink to="/booking" className={getNavLinkClass}>Booking</NavLink>
-                            <NavLink to="/parcels" className={getNavLinkClass}>Parcels</NavLink>
-                            <NavLink to="/routes" className={getNavLinkClass}>Routes</NavLink>
-                            <NavLink to="/gallery" className={getNavLinkClass}>Gallery</NavLink>
-                            <NavLink to="/about" className={getNavLinkClass}>About Us</NavLink>
-                            <NavLink to="/contact" className={getNavLinkClass}>Contact</NavLink>
+                            <DesktopNavLink to="/">Home</DesktopNavLink>
+                            <DesktopNavLink to="/booking">Booking</DesktopNavLink>
+                            <DesktopNavLink to="/parcels">Parcels</DesktopNavLink>
+                            <DesktopNavLink to="/routes">Routes</DesktopNavLink>
+                            <DesktopNavLink to="/gallery">Gallery</DesktopNavLink>
+                            <DesktopNavLink to="/about">About Us</DesktopNavLink>
+                            <DesktopNavLink to="/contact">Contact</DesktopNavLink>
                         </div>
                     </div>
                     <div className="hidden md:block">
@@ -51,20 +56,20 @@ const Header: React.FC = () => {
                 </div>
             </div>
 
-            <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`} id="mobile-menu">
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <NavLink to="/" className={getNavLinkClass}>Home</NavLink>
-                    <NavLink to="/booking" className={getNavLinkClass}>Booking</NavLink>
-                    <NavLink to="/parcels" className={getNavLinkClass}>Parcels</NavLink>
-                    <NavLink to="/routes" className={getNavLinkClass}>Routes</NavLink>
-                    <NavLink to="/gallery" className={getNavLinkClass}>Gallery</NavLink>
-                    <NavLink to="/about" className={getNavLinkClass}>About Us</NavLink>
-                    <NavLink to="/contact" className={getNavLinkClass}>Contact</NavLink>
+            <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden absolute top-full left-0 right-0 bg-black border-t border-gray-700 shadow-lg`} id="mobile-menu">
+                <div className="px-4 py-3 space-y-2">
+                    <NavLink to="/" className={({ isActive }) => `block transition-colors duration-300 px-3 py-3 rounded-md text-base font-medium ${isActive ? 'text-ena-yellow bg-ena-yellow/10 border-l-4 border-ena-yellow' : 'text-white hover:text-ena-yellow hover:bg-gray-800'}`}>Home</NavLink>
+                    <NavLink to="/booking" className={({ isActive }) => `block transition-colors duration-300 px-3 py-3 rounded-md text-base font-medium ${isActive ? 'text-ena-yellow bg-ena-yellow/10 border-l-4 border-ena-yellow' : 'text-white hover:text-ena-yellow hover:bg-gray-800'}`}>Booking</NavLink>
+                    <NavLink to="/parcels" className={({ isActive }) => `block transition-colors duration-300 px-3 py-3 rounded-md text-base font-medium ${isActive ? 'text-ena-yellow bg-ena-yellow/10 border-l-4 border-ena-yellow' : 'text-white hover:text-ena-yellow hover:bg-gray-800'}`}>Parcels</NavLink>
+                    <NavLink to="/routes" className={({ isActive }) => `block transition-colors duration-300 px-3 py-3 rounded-md text-base font-medium ${isActive ? 'text-ena-yellow bg-ena-yellow/10 border-l-4 border-ena-yellow' : 'text-white hover:text-ena-yellow hover:bg-gray-800'}`}>Routes</NavLink>
+                    <NavLink to="/gallery" className={({ isActive }) => `block transition-colors duration-300 px-3 py-3 rounded-md text-base font-medium ${isActive ? 'text-ena-yellow bg-ena-yellow/10 border-l-4 border-ena-yellow' : 'text-white hover:text-ena-yellow hover:bg-gray-800'}`}>Gallery</NavLink>
+                    <NavLink to="/about" className={({ isActive }) => `block transition-colors duration-300 px-3 py-3 rounded-md text-base font-medium ${isActive ? 'text-ena-yellow bg-ena-yellow/10 border-l-4 border-ena-yellow' : 'text-white hover:text-ena-yellow hover:bg-gray-800'}`}>About Us</NavLink>
+                    <NavLink to="/contact" className={({ isActive }) => `block transition-colors duration-300 px-3 py-3 rounded-md text-base font-medium ${isActive ? 'text-ena-yellow bg-ena-yellow/10 border-l-4 border-ena-yellow' : 'text-white hover:text-ena-yellow hover:bg-gray-800'}`}>Contact</NavLink>
                 </div>
-                <div className="pt-4 pb-3 border-t border-gray-700">
-                    <div className="flex items-center px-5 space-x-2">
-                         <NavLink to="/login" className="w-full text-center bg-transparent text-white hover:bg-ena-yellow hover:text-black border border-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300">Login</NavLink>
-                         <NavLink to="/signup" className="w-full text-center bg-ena-yellow text-black hover:bg-ena-yellow-dark px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300">Sign Up</NavLink>
+                <div className="px-4 py-4 border-t border-gray-700 bg-gray-900">
+                    <div className="flex flex-col space-y-3">
+                         <NavLink to="/login" className="w-full text-center bg-transparent text-white hover:bg-ena-yellow hover:text-black border border-white px-4 py-3 rounded-full text-base font-medium transition-colors duration-300">Login</NavLink>
+                         <NavLink to="/signup" className="w-full text-center bg-ena-yellow text-black hover:bg-ena-yellow-dark px-4 py-3 rounded-full text-base font-medium transition-colors duration-300">Sign Up</NavLink>
                     </div>
                 </div>
             </div>
