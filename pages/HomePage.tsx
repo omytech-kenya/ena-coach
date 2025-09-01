@@ -23,7 +23,7 @@ const HomePage: React.FC = () => {
     return (
         <div className="min-h-screen">
                         {/* Enhanced Hero Section */}
-            <div className="relative min-h-screen bg-gradient-to-br from-blue-900 via-black to-gray-900 overflow-hidden">
+            <div className="relative bg-gradient-to-br from-blue-900 via-black to-gray-900 overflow-hidden">
                 {/* Background Video/Image */}
                 <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
                      style={{ backgroundImage: "url('/ena12.png')" }}>
@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
                 <div className="absolute bottom-20 left-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
                 
                 {/* Hero Content */}
-                <div className="relative z-10 flex flex-col items-start justify-start min-h-screen text-white px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pt-8 sm:pt-8 lg:pt-16 pb-8 sm:pb-20 lg:pb-28">
+                <div className="relative z-10 flex flex-col items-start justify-start min-h-screen text-white px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pt-8 sm:pt-8 lg:pt-16 pb-4 sm:pb-8 lg:pb-12">
                     <div className="max-w-4xl lg:max-w-3xl">
                         <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-ena-yellow/20 backdrop-blur-sm rounded-full border border-ena-yellow/30 mb-6 sm:mb-8">
                             <span className="text-ena-yellow text-sm sm:text-base font-semibold">🚌 Kenya's Premier Transport Service</span>
@@ -84,15 +84,7 @@ const HomePage: React.FC = () => {
                         </div>
                     </div>
                     
-                    {/* Scroll Down Indicator - Only visible on small devices */}
-                    <div className="sm:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
-                        <div className="flex flex-col items-center text-white/80">
-                            <span className="text-xs mb-1">Scroll Down</span>
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                            </svg>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 
