@@ -54,33 +54,43 @@ const HomePage: React.FC = () => {
                             Your journey begins with ENA Coach.
                         </p>
                         
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto justify-center items-center">
                             <button onClick={() => navigate('/booking')} 
-                                    className="group bg-gradient-to-r from-ena-yellow to-orange-400 text-black font-bold py-3 sm:py-4 lg:py-4 px-6 sm:px-8 lg:px-10 rounded-xl sm:rounded-2xl text-base sm:text-lg lg:text-xl shadow-xl hover:shadow-2xl hover:shadow-ena-yellow/25 transition-all duration-300 transform hover:scale-105 hover:from-orange-400 hover:to-ena-yellow w-full sm:w-auto">
-                                <span className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
-                                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    className="group bg-gradient-to-r from-ena-yellow to-orange-400 text-black font-bold py-4 sm:py-5 lg:py-5 px-8 sm:px-10 lg:px-12 rounded-2xl sm:rounded-3xl text-lg sm:text-xl lg:text-2xl shadow-2xl hover:shadow-ena-yellow/30 transition-all duration-300 transform hover:scale-105 hover:from-orange-400 hover:to-ena-yellow w-full sm:w-auto min-w-[200px] sm:min-w-[220px] backdrop-blur-sm border border-ena-yellow/20">
+                                <span className="flex items-center justify-center gap-3 sm:gap-4">
+                                    <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                     </svg>
                                     <span className="hidden sm:inline">Book Your Journey</span>
                                     <span className="sm:hidden">Book Now</span>
-                                    <svg className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                     </svg>
                                 </span>
                             </button>
                             <button onClick={() => navigate('/routes')} 
-                                    className="group bg-white/10 backdrop-blur-md text-white font-bold py-3 sm:py-4 lg:py-4 px-6 sm:px-8 lg:px-10 rounded-xl sm:rounded-2xl text-base sm:text-lg lg:text-xl border-2 border-white/40 hover:bg-white/20 hover:border-white/60 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
-                                <span className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
-                                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    className="group bg-white/10 backdrop-blur-md text-white font-bold py-4 sm:py-5 lg:py-5 px-8 sm:px-10 lg:px-12 rounded-2xl sm:rounded-3xl text-lg sm:text-xl lg:text-2xl border-2 border-white/50 hover:bg-white/20 hover:border-white/70 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto min-w-[200px] sm:min-w-[220px] shadow-xl hover:shadow-2xl hover:shadow-white/20">
+                                <span className="flex items-center justify-center gap-3 sm:gap-4">
+                                    <svg className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 4m0 13V4m0 0L9 7" />
                                     </svg>
                                     <span className="hidden sm:inline">Explore Routes</span>
                                     <span className="sm:hidden">Routes</span>
-                                    <svg className="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 9l3 3m0 0l-3 3m3-3H9" />
                                     </svg>
                                 </span>
                             </button>
+                        </div>
+                    </div>
+                    
+                    {/* Scroll Down Indicator - Only visible on small devices */}
+                    <div className="sm:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
+                        <div className="flex flex-col items-center text-white/80">
+                            <span className="text-xs mb-1">Scroll Down</span>
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                            </svg>
                         </div>
                     </div>
                 </div>
