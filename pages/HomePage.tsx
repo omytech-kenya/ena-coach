@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
                 <div className="absolute bottom-20 left-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
                 
                 {/* Hero Content */}
-                <div className="relative z-10 flex flex-col items-start justify-center min-h-screen text-white px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pt-2 sm:pt-10 lg:pt-12 pb-20 sm:pb-24 lg:pb-32">
+                <div className="relative z-10 flex flex-col items-start justify-center min-h-screen text-white px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pt-2 sm:pt-8 lg:pt-16 pb-16 sm:pb-20 lg:pb-28">
                     <div className="max-w-4xl lg:max-w-3xl">
                         <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-ena-yellow/20 backdrop-blur-sm rounded-full border border-ena-yellow/30 mb-6 sm:mb-8">
                             <span className="text-ena-yellow text-sm sm:text-base font-semibold">🚌 Kenya's Premier Transport Service</span>
